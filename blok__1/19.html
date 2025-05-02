@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "СкролДо". Плавна навігація по сторінці.</h1>
+			<p>
+				У цьому компоненті реалізований плавний скрол після натискання на посилання (кнопці) до потрібного блоку на сторінці.
+				Якщо у адресі сторінки буде передано хеш і блок з таким селектором буде знайдено на сторінці, прокручування до блоку
+				відбудеться автоматично. Також модуль дозволяє побудувати навігацію по сторінці з додаванням класу поточному пункту
+				навігації (пункту меню) при скроллі до певного блоку.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				До елементів навігації (пунктів меню), або до довільного об’єкта, додаємо HTML-атрибут <span>data-fls-scrollto</span>, а в якості
+				значення вказуємо CSS селектор блоку до якого потрібно прокрутити:
+			</p>
+			<p><span>
+				&#60;a href="#" data-fls-scrollto=".ім'я класу блоку" class="link"&#62;Пункт навігаціі&#60;/a&#62; <br>
+				&#60;a href="#" data-fls-scrollto="#id блоку" class="link"&#62;Пункт навігаціі&#60;/a&#62;
+			</span></p>
+			<p>
+				Якщо потрібно, щоб скролл враховував шапку (не докручував на висоту шапки, використовується при фіксованих шапках)
+				потрібно додати до об’єкта навігації атрибут <span>data-fls-scrollto-header</span>:
+			</p>
+			<p><span>
+				&#60;a href="#" data-fls-scrollto-header data-fls-scrollto=".ім'я класу блоку" class="link"&#62;Пункт навігаціі&#60;/a&#62;
+			</span></p>
+			<p>
+				Якщо потрібно, щоб скрол не докручував до блоку на вказану висоту, необхідно додати до об’єкта навігації атрибут
+				<span>data-fls-scrollto-top</span>, а в якості значення вказати число – необхідну висоту:
+			</p>
+			<p><span>
+				&#60;a href="#" data-fls-scrollto-top="30" data-fls-scrollto="#id блоку" class="link"&#62;Пункт навігаціі&#60;/a&#62;
+			</span></p>
+			<h2>Додавання класу до поточного пункту навігації</h2>
+			<p>
+				Для включення функціоналу додавання класу необхідно задіяти компонент <span>"спостерігач"</span>.
+				<br><br>
+				Тож для секцій, при появі яких буде додаватись клас до відповідного пункту навігації, додаємо атрибут <span>data-fls-watcher</span>
+				зі значенням navigator:
+				<br><br>
+				<span>
+					&#60;a href="#" data-fls-scrollto=".some-section" class="link"&#62;Пункт навігаціі&#60;/a&#62; <br>
+					... <br>
+					&#60;section data-fls-watcher="navigator" class="some-section"&#62;&#60;/section&#62;
+				</span>
+				<br><br>
+				Після цього, при прокручуванні до об’єкту навігації, до відповідного пункту навігації буде додано клас
+				<span>--navigator-active</span>. А коли об'єкт зникає з в'юпорта, клас прибиреться.
+			</p>
+			<h2>Прокручування до потрібного блоку по хешу (при відкритті сторінки)</h2>
+			<p>
+				Для того щоб прокрутити сторінку до потрібного блоку при відкритті сторінки необхідно додати до адреси хеш, що містить
+				ім’я класу потрібного блоку.
+				<br><br>
+				Приклад адресного рядка та потрібного блоку:
+				<br><br>
+				<span>
+					https://fls.guru/index.html#some-section
+					<br><br>
+					&#60;section class="some-section"&#62; ... &#60;/section&#62;
+				</span>
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Хедер"</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) реалізований окремий компонент шапки сайту та його плагини
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/header, тут ви знайдете JS-файл для написання логіки
+				компоненту, HTML-файл з базовим кодом, SCSS-файл для стилізації компоненту.
+				<br><br>
+				Також в папці src/components/layout/header/plugins присутні плагіни компоненту
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>Підключіть HTML-файл компоненту на свою сторінку за допомогою &#60;include&#62; (підключено за замовченням).</p>
+			<h2>Використання плагінів</h2>
+			<p>
+				Плагін "Scroll"
+				<br><br>
+				Дозволяє керувати класами які додаються &#60;header&#62; під час скролу. Для підключення додайте дата-атрибут
+					<span>data-fls-header-scroll</span> до тега &#60;header&#62;:
+			</p>
+			<p>
+				&#60;header data-fls-header data-fls-header-scroll class="header"&#62; <br>
+					... <br>
+				&#60;/header&#62;
+			</p>
+			<p><span>
+				Тепер, при скролі більше одного пікселя до шапки буде додаватись клас <span>--header-scroll</span>
+				<br><br>
+				Для керування кількістю прокручених пікселів перед додаванням класу, додайте дата-атрибуту <span>data-fls-header-scroll</span>
+				значення:
+			</span></p>
+			<p><span>
+				&#60;header data-fls-header data-fls-header-scroll="500" class="header"&#62; <br>
+					... <br>
+				&#60;/header&#62;
+			</span></p>
+			<p>
+				Також можна підключити функціонал "зникаючої" шапки для покращення юзабіліті сайту, для цього додайте дата-атрибут
+				<span>data-fls-header-scroll-show</span> до тега &#60;header&#62;:
+			</p>
+			<p><span>
+				&#60;header data-fls-header data-fls-header-scroll data-fls-header-scroll-show class="header"&#62; <br>
+					... <br>
+				&#60;/header&#62;
+			</span></p>
+			<p>
+				Тепер шапка буде зникати при скролі вниз та з'являтись через 500ms паузи. Для керування паузою додайте значення
+				дата-атрибуту <span>data-fls-header-scroll-show:</span>
+			</p>
+			<p><span>
+				&#60;header data-fls-header data-fls-header-scroll data-fls-header-scroll-show="1000" class="header"&#62; <br>
+					... <br>
+				&#60;/header&#62;
+			</span></p>
+			<p>
+				При необхідності змінити стилізацію плагіну "Scroll" використовуйте файл
+				src/components/layout/header/plugins/scroll/scroll.scss
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

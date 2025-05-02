@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "ФулПейдж"</h1>
+			<p>
+				У шаблоні вбудований функціонал поекранного прокручування (скрола) сторінки. За замовченням кожна секція сторінки займає
+				мінімум всю висоту екрану.
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/fullpage, тут ви знайдете JS-файл компоненту, HTML-файл з
+				прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML, ви можете використовувати сніпет fullpage або побудувати HTML-структуру самостійно:
+			</p>
+			<p><span>
+				&#60;div data-fls-fullpage class="some-class"&#62; <br>
+					&#60;div data-fls-fullpage-section class="some-class__section"&#62; ... &#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>Буллети</p>
+			<p>
+				Існує можливість додати кнопки перемикання секцій (буллети). Для цього до об’єкта з дата атрибутом <span>data-fls-fullpage</span>
+				додати дата атрибут <span>data-fls-fullpage-bullets</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-fullpage data-fls-fullpage-bullets class="some-class"&#62; <br>
+					&#60;div data-fls-fullpage-section class="some-class__section"&#62; ... &#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>Ефекти перемикання</p>
+			<p>
+				Для зміни ефекту перемикання, об’єкту з дата атрибутом <span>data-fls-fullpage</span> додати дата атрибут <span>data-fls-fullpage-effect</span> і
+				як значення додати один із наступних параметрів <span>fade, cards, slider</span>(за замовчуванням)
+			</p>
+			<p><span>
+				&#60;div data-fls-fullpage data-fls-fullpage-effect="fade" class="some-class"&#62; <br>
+					&#60;div data-fp-section class="some-class__section"&#62; ... &#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Автори Хмурий Кіт, Фрілансер по життя.
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

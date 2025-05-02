@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Налаштування збірки «Чертоги Фрілансера» 4</h1>
+			<p class="text">
+				ЧФ4 побудована так, щоб якомога більше можливостей можна було налаштувати під потреби користувача.
+			</p>
+			<p>Для того щоб налаштувати збірку відкриваємо файл template.config.js в папці проєкту.</p>
+			<h3>Перелік налаштувань:</h3>
+			<p class="text">1. <span>vscode</span> - Налаштування редактора VS Code <br> <br>
+				<span class="span">1.1 settings - Автоматичне налаштування псевдонімів для проєкту (плагін Path Autocomplete)</span> <br><br>
+				<span class="span">1.2 snippets - Автоматичне додавання сніпетів ЧФ4 в проєкт</span>
+			</p>
+			<p class="text">2. <span>navpanel</span> - Налаштування навігаційної панелі <br><br>
+				<span class="span">2.1 dev - У режимі розробника. Вмикач: true/false</span> <br><br>
+				<span class="span">2.2 build - У режимі продакшена. Вмикач: true/false</span> <br><br>
+				<span class="span">2.3 position - Позиція виводу панелі: left/right</span> <br><br>
+				<span class="span">2.4 color - Колір тексту та посилань</span> <br><br>
+				<span class="span">2.5 background - Колір фону</span> <br><br>
+				<span class="span">2.6 transition - Швидкість анімації відкриття у мілісекундах</span>
+			</p>
+			<p class="text">3. <span>server</span> - Налаштування локального серверу<br><br>
+				<span class="span">3.1 path - Налаштування шляхів до файлів: ./ - відносний, / - абсолютний</span><br><br>
+				<span class="span">3.2 copyfiles - Копіювання файлів з папки src/files у dist/files в режимі продакшн. Вмикач: true/false</span><br><br>
+				<span class="span">3.3 version - Додавання унікальної версії до кінцевих CSS/JS файлів. Вмикач: true/false</span><br><br>
+				<span class="span">3.4 hostname - Назва серверу</span><br><br>
+				<span class="span">3.5 port - Порт серверу</span>
+			</p>
+			<p class="text">4. <span>html</span> - Налаштування обробки HTML-файлів <br><br>
+				<span class="span">4.1 beautify - Форматування в режимі продакшн</span><br><br>
+				<span class="span">4.2 enable - Вмикач: true/false</span><br><br>
+				<span class="span">4.3 indent - Налаштування типу відступів</span>
+			</p>
+			<p class="text">5. <span>styles</span> - Налаштування роботи зі стилями та обробки SCSS/CSS-файлів<br><br>
+				<span class="span">5.1 tailwindcss - Підключити Tailwindcss. Вмикач: true/false</span><br><br>
+				<span class="span">5.2 pxtorem - Переводити PX в REM в режимі продакшн. Вмикач: true/false</span><br><br>
+				<span class="span">5.3 critical - Створити та додати в HTML-файли критичні CSS-стилі. Вмикач: true/false</span><br><br>
+				<span class="span">5.4 codesplit - Розділяти CSS-фали на окремі та підключати відповідним HTML-сторінкам в режимі продакшн. Вмикач: true/false</span><br><br>
+				<span class="span">5.5 devfiles - Створення нестиснутих копій файлів в режимі продакшн. Вмикач: true/false</span>
+			</p>
+			<p class="text">6. <span>fonts</span> - Налаштування обробки шрифтів<br><br>
+				<span class="span">6.1 iconsfont - Створення шрифту з SVG іконок (Іконкового шрифту) та підключення його в проєкт. Вмикач: true/false</span><br><br>
+				<span class="span">6.2 download - Завантажувати та робити локальними шрифти які підключені віддалено (наприклад з Google Fonts). Вмикач: true/false</span>
+			</p>
+			<p class="text">7. <span>images</span> - Налаштування обробки зображень<br><br>
+				<span class="span">7.1 svgsprite - Створення спрайту з SVG-іконок та підключення його в проєкт. Вмикач: true/false</span><br><br>
+				<span class="span">7.2 optimize - Налаштування оптимізації зображень в режимі продакшн</span><br><br>
+				<span class="span">7.3 enable - Вмикач: true/false. Якщо оптимізаця вимкнена зображення просто копіюються без конвертації та оптимізації</span><br><br>
+				<span class="span">7.4 edithtml - Вносити зміни в HTML-файли. Якщо увімкнено, то HTML-файли будуть змінені згідно з налаштуваннями конвертації та створення додаткових розмірів зображень</span><br><br>
+				<span class="span">7.5 sizes - Розміри файлів, які будуть додатково створені</span><br><br>
+				<span class="span">7.6 dpi - Множники для створення додаткових файлів</span><br><br>
+				<span class="span">7.7 attrignore - Атрибут тега IMG при наявності якого зображення не буде оброблено</span><br><br>
+				<span class="span">7.8 modernformat - Налаштування конвертації в сучасні формати</span><br><br>
+				<span class="span">7.9 enable - Вмикач: true/false</span><br><br>
+				<span class="span">7.10 type - Формат зображення в який потрібно конвертувати: webp/avif</span><br><br>
+				<span class="span">7.11 only - Залишати лише файли в сучасному форматі після конвертації. Вмикач: true/false</span><br><br>
+				<span class="span">7.12 quality - Якість зображення</span><br><br>
+				<span class="span">7.13 jpeg - Налаштування оптимізації зображень</span><br><br>
+				<span class="span">7.14 quality - Якість зображення,</span><br><br>
+				<span class="span">7.15 png - Налаштування оптимізації зображень</span><br><br>
+				<span class="span">7.16 quality - Якість зображення</span>
+			</p>
+			<p class="text">8. <span>js</span> - Налаштування обробки JavaScript-файлів<br><br>
+				<span class="span">8.1 hotmodules - "Гаряче" підключення компонентів. Вмикач: true/false</span><br><br>
+				<span class="span">8.2 devfiles - Створення нестиснутих копій файлів в режимі продакшн. Вмикач: true/false</span><br><br>
+				<span class="span">8.3 bundle - Налаштування формування кінцевого файлу в режимі продакшн</span><br><br>
+				<span class="span">8.4 enable - Система збирає весь код в один JS та один CSS файли незалежно від налаштування styles -> codesplit. Вмикач: true/false</span>
+			</p>
+			<p class="text">9. <span>react</span> - Вмикає обробку React. Вмикач: true/false</p>
+			<p class="text">10. <span>vue</span> - Вмикає обробку Vue. Вмикач: true/false</p>
+			<p class="text">11. php - Налаштування PHP-серверу<br><br>
+				<span class="span">11.1 enable - Вмикач: true/false</span><br><br>
+				<span class="span">11.2 base - Шлях до папки де знаходяться файли PHP</span><br><br>
+				<span class="span">11.3 hostname - Ім'я хосту</span><br><br>
+				<span class="span">11.4 port - Порт</span><br><br>
+				<span class="span">11.5 binary - Шлях до папки де встановлений інтерпритатор PHP</span><br><br>
+				<span class="span">11.6 ini - Шлях до файлу налаштувань php.ini</span>
+			</p>
+			<p class="text">12. <span>pug</span> - Налаштування препроцесору PUG <br> <br>
+				<span class="span">12.1 enable - Вмикач: true/false</span>
+			</p>
+			<p class="text">13. <span>ftp</span> - Налаштування відправлення кінцевих файлів (з папки dist) на сервер (хостинг) по FTP в режимі продакшена<br> <br>
+				<span class="span">13.1 host - Ім'я FTP хосту</span><br> <br>
+				<span class="span">13.2 port - FTP Порт</span><br> <br>
+				<span class="span">13.3 remoteDir - Віддалена папка на сервері</span><br> <br>
+				<span class="span">13.4 user - Ім'я користувача FTP</span><br> <br>
+				<span class="span">13.5 password - Пароль користувача FTP</span>
+			</p>
+			<p class="text">14 <span>logger</span> - Логи роботи модулів та компонентів збірки<br> <br>
+				<span class="span">14.1 terminal - Логи роботи модулів в терміналі. Вмикач: true/false</span><br> <br>
+				<span class="span">14.2 console - Логи роботи компонентів в консолі</span><br> <br>
+				<span class="span">14.3 enable - Вмикач: true/false</span><br> <br>
+				<span class="span">14.4 removeonbuild - Прибирає логи в режимі продакшн. Вмикач: true/false</span>
+			</p>
+			<p class="text">15. <span>projectpage</span> - Cтворення сторінки проєкту в режимі продакшн. Сторінка буде містити посилання на усі HTML-файли проєкту для зручної демонстрації замовнику<br> <br>
+				<span class="span">15.1 enable - Вмикач: true/false</span><br> <br>
+				<span class="span">15.2 projectname - Назва проєкту, яка виводиться на сторінці замість %projectname%. Якщо порожньо, замінеться назвою папки проєкту</span><br> <br>
+				<span class="span">15.3 template - Шлях до шаблону сторінки проєкту</span><br> <br>
+				<span class="span">15.4 outfilename - І'я файлу. Якщо порожньо то створиться HTML-файл з назвою папки проєкту</span>
+			</p>
+			<p class="text">16. <span>aliases</span> - Налаштування псевдонімів</p>
+			<p class="text">17. <span>coffee</span> - Налаштування повідомлення про перерву<br> <br>
+				<span class="span">17.1 enable - Вмикач: true/false</span><br> <br>
+				<span class="span">17.2 text - Текст повідомлення</span><br> <br>
+				<span class="span">17.3 interval - Інтервал виводу повідомлення в хвилинах</span>
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

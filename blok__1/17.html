@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Модальне вікно" (popup)</h1>
+			<p>
+				Цей функціонал додає можливість використовувати модульні (випливаючі) вікна. Робота модуля полягає в наступному:
+				користувач натискає на вказаний елемент (за замовчюванням це атрибут із вказаним ім'ям попапу
+				<span>data-fls-popup-link=’popup`s name’</span> ). При цьому до тега body додається атрибут <span>data-fls-popup-open</span>. Також блокується
+				прокручування сторінки (можна вимкнути), фокусування елементів “перелітає” на popup, із запам’ятовуванням попереднього
+				сфокусованого елемента на сторінці. Закриття popup відбувається при натисканні кнопки закриття (за замовчуванням елемент
+				з атрибутом <span>data-fls-popup-close</span> ), по кліку на “порожньому місці” (не на popup), за натисканням кнопки <span>ESC</span>.
+			</p>
+			<p><span>
+				HTML/SCSS/JS файли компоненту знаходяться в папці src/components/layout/popup/
+			</span></p>
+			<h2>Використання компоненту</h2>
+			<p>За допомогою include підключаємо HTML-файл компоненту до нашої HTML-сторнки (можна скористатись сніпетом pop):</p>
+			<p><span>&#60;include src="@components/layout/popup/popup.html"&#62;&#60;/include&#62;</p></span>
+			<p>
+				В файлі src/components/layout/popup/popup.html вже є базовий HTML-код одного попапу, важливо що об'єкт має атрибут
+				<span>data-fls-popup</span> зі значенням popup. Це значення і є ім'ям попапу.
+			</p>
+			<p><span>Ви можете створювати ще модальні вікна надаючі їм унікальні імена</span></p>
+			<p>
+				Для того щоб виклакати відкриття того чи іншого вікна додайте об'єкту (посилання, кнопка тощо) атрибут
+				data-fls-popup-link та в заченні вкажіть ім'я попапу який треба відкрити (можна скористатись сніпетом pl).
+				<br><br>
+				Наприклад по кліку на це посилання відкриється вікно з ім'ям popup:
+			</p>
+			<p><span> &#60;a href="#" data-fls-popup-link="popup"&#62;Popup&#60;/a&#62; </span></p>
+			<h2>Додаткові можливості</h2>
+			<p>
+				Компонент "Модальне вікно" вміє відкривати popup по хешу. Наприклад за цією адресою відкриється вікно з ім'ям popup:
+			</p>
+			<p><span>http://localhost:1111/#popup</span></p>
+			<p>
+				Також, є можливість відкривати YouTube-відео у модальному вікні з автоматичним запуском програвання. Для цього додайте
+				атрибут data-fls-popup-youtube, до об'єкту який відкриває попап, зі значенням ID YouTube-відео.
+				<br><br>
+				Наприклад, якщо YouTube-відео має ось таке посилання https://www.youtube.com/watch?v=TzqNA7FoEjY то його ID це
+				TzqNA7FoEjY. Саме цей код і вказується в атрибуті:
+			</p>
+			<p><span>
+				&#60;a href="#" data-fls-popup-link="popup" data-fls-popup-youtube="TzqNA7FoEjY"&#62;Popup&#60;/a&#62;
+			</span></p>
+			<p>
+				Якщо ваше модальне вікно відкривається, наприклад по хешу або після відправки форми, то атрибут <span>data-fls-popup-youtube</span> з
+				ID відео додайте до головного тегу попапу в файлі src/components/layout/popup/popup.html:
+			</p>
+			<p><span>
+				&#60;div data-fls-popup="popup" data-fls-popup-youtube="TzqNA7FoEjY" aria-hidden="true" class="popup"&#62;<br>
+					..... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				В обох випадках відео буде інтегроване в об'єкт з атрибутом data-fls-popup-content з заміною усього вмісту, якщо виникає
+				потреба вивести відео в якомусь іншому місці модального вікна, створіть об'єкт і додайте йому атрибут
+				data-fls-popup-youtube-place
+			</p>
+			<h2>Методи та події</h2>
+			<p>
+				Методи
+				<br><br>
+				Для того щоб викликати той чи інший метод компонента звертайтесь до нього через глобальну змінну window.flsPopup.
+				<br><br>
+				Наприклад, наступне звернення відкриє попап з ім'ям popup:
+			</p>
+			<p><span>window.flsPopup.open('popup')</span></p>
+			<p>
+				Події
+				<br><br>
+				У класі попапів існує ряд подій:
+				<br><br>
+				<span>beforePopupOpen</span> – спрацює перед відкриттям попапа
+				<br><br>
+				<span>afterPopupOpen</span> – спрацює після відкриття попапа
+				<br><br>
+				<span>beforePopupClose</span> – спрацює перед відкриттям попапа
+				<br><br>
+				<span>afterPopupClose</span> – спрацює після відкриття попапа
+				<br><br>
+				Щоб працювати з подією вішаємо прослуховування на document
+			</p>
+			<p><span>document.addEventListener("afterPopupOpen", function (e) { <br>
+			// Попап <br>
+			const currentPopup = e.detail.popup;
+			})</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Кошик"</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) реалізований функціонал додавання товарів в кошик, з можливістю
+				анімації зображення товару
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/forms/addtocart, тут ви знайдете JS-файл компоненту, HTML-файл з
+				прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML беспосередньо до об'єкту який виводить кількість товарів в кошику додайте дата-атрибут <span>data-fls-addtocart:</span>
+			</p>
+			<p><span>
+				&#60;div class="cart"&#62; <br>
+					&#60;span class="cart__quantity" data-fls-addtocart&#62;0&#60;/span&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для кнопки "Купити", "Додати у кошик" тощо додайте дата-атрибут <span>data-fls-addtocart-button:</span>
+			</p>
+			<p><span>
+				&#60;button data-fls-addtocart-button&#62;Додати у кошик&#60;/button&#62;
+			</span></p>
+			<p>
+				Для використання додаткового функціоналу, додаємо обгортку товару що додається в кошик, з дата-атрибутом
+				<span>data-fls-addtocart-product:</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-addtocart-product class="product"&#62; <br>
+					... <br>
+					&#60;button data-fls-addtocart-button&#62;Додати в кошик&#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Тепер ми маємо можливість додати керування кількістю товарів які будуть додані у кошик. Для цього необхідно додати
+				дата-атрибут data-fls-addtocart-quantity для тегу &#60;input&#62; який керує кількістю, або використати компонент "Кількість"
+				ЧФ4 теж з додаванням <span>data-fls-addtocart-quantity:</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-addtocart-product class="product"&#60; <br>
+					... <br>
+					&#60;input data-fls-addtocart-quantity autocomplete="off" type="text" name="form[]" value="1"&#60; <br>
+					&#60;button data-fls-addtocart-button&#60;Додати у кошик&#60;/button&#60; <br>
+				&#60;/div&#60;
+			</span></p>
+			<p>Або</p>
+			<p><span>
+				&#60;div data-fls-addtocart-product class="product"&#62; <br>
+					... <br>
+					&#60;div data-fls-quantity class="quantity"&#62; <br>
+						&#60;button data-fls-quantity-minus type="button" class="quantity__button quantity__button--minus"&#62;&#60;/button&#62; <br>
+						&#60;div class="quantity__input"&#62; <br>
+							&#60;input data-fls-addtocart-quantity data-fls-quantity-value autocomplete="off" type="text" name="form[]" value="1"&#62; <br>
+						&#60;/div&#62; <br>
+						&#60;button data-fls-quantity-plus type="button" class="quantity__button quantity__button--plus"&#62;&#60;/button&#62; <br>
+					&#60;/div&#62; <br>
+					&#60;button data-fls-addtocart-button&#62;Додати у кошик&#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Також, є можливість анімувати зображення товару створюючи "політ у кошик". Для цього тегу &#60;img&#62; товару додайте
+				дата-трибут data-fls-addtocart-image:
+			</p>
+			<p><span>
+				&#60;div data-fls-addtocart-product class="product"&#62; <br>
+					... <br>
+					&#60;img src="..." data-fls-addtocart-image alt="Image"&#62; <br>
+					&#60;button data-fls-addtocart-button&#62;Додати у кошик&#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для керуванням швидкістю анімації додайте значення атрибуту <span>data-fls-addtocart-image</span> у мілісекундах (за замовченням
+				500ms):
+			</p>
+			<p><span>
+				&#60;div data-fls-addtocart-product class="product"&#62; <br>
+					... <br>
+					&#60;img src="..." data-fls-addtocart-image="1000" alt="Image"&#62; <br>
+					&#60;button data-fls-addtocart-button>Додати у кошик&#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Рядок що біжить"</h1>
+			<p>Дуже корисний компонент з анімацією рядка з елементами</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/effects/marquee, тут ви знайдете JS-файл компоненту, HTML-файл з
+				прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML скористайтесь сніпетом mar, або побудуйте структуру з використання дата-атрибуту <span>data-fls-marquee</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-marquee&#62; <br>
+					&#60;div&#62;елемент один&#60;/div&#62; <br>
+					&#60;div&#62;елемент два&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<h2>Додаткові можливості</h2>
+			<p>
+				Для коригування відступів між елементами використовуйте дата-атрибут <span>data-fls-marquee-space</span> зі значенням (за замовченням значення 30px):
+			</p>
+			<p><span>
+				&#60;div data-fls-marquee data-fls-marquee-space="50"&#62; <br>
+					&#60;div&#62;елемент один&#60;/div&#62; <br>
+					&#60;div&#62;елемент два&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для коригування швидкості анімації використовуйте дата-атрибут <span>data-fls-marquee-speed</span>зі значенням в мілісекундах (за
+				замовченням значення 1000ms):
+			</p>
+			<p><span>
+				&#60;div data-fls-marquee data-fls-marquee-speed="2000"&#62; <br>
+					&#60;div&#62;елемент один&#60;/div&#62; <br>
+					&#60;div&#62;елемент два&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для зупинки анімації при наведенні миші використовуйте дата-атрибут <span>data-fls-marquee-pause:</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-marquee data-fls-marquee-pause&#62; <br>
+					&#60;div&#62;елемент один&#60;/div&#62; <br>
+					&#60;div&#62;елемент два&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для зміни напрямку руху використовуйте дата-атрибут <span>data-fls-marquee-direction</span> та значення запрмку - left, right, top,
+				bottom (значення за замовченням left)
+			</p>
+			<p><span>
+				&#60;div data-fls-marquee data-fls-marquee-direction="right"&#62; <br>
+					&#60;div&#62;елемент один&#60;/div&#62; <br>
+					&#60;div&#62;елемент два&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				При використанні <span>data-fls-marquee-direction</span> 'top' або 'bottom', у об'єкта має бути фіксована висота та overflow: hidden;
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

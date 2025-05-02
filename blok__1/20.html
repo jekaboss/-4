@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент “Показати ще”</h1>
+			<p>
+				Компонент “Показати ще” дозволяє спочатку приховати частину тексту або елементів списку, показуючи тільки вказану висоту
+				або кількість елементів. Є можливість включати функціонал на певній ширині екрану (брейкпоінті).
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/showmore, тут ви знайдете JS-файл компоненту, HTML-файл з
+				прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				У потрібному місці викликати сніпет showmore (класи замінити на потрібні). Або вручну створити структуру де для оболонки
+				доданий атрибут data-fls-showmore, для дочірнього елемента data-fls-showmore-content і кнопки data-fls-showmore-button.
+				Кнопку спочатку потрібно приховати додавши атрибут hidden і додати два теги <span> з текстом показу та приховування
+				контенту:
+			</p>
+			<p><span>
+				&#60;div data-fls-showmore class="block"&#62; <br>
+					&#60;div data-fls-showmore-content class="block__content">&#60;/div&#62; <br>
+					&#60;button hidden data-fls-showmore-button type="button" class="block__more"&#62; &#60;span&#62;Показати ще&#60;/span&#62; <br>
+						&#60;span&#62;Приховати&#60;/span&#62; &#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				До елемента з атрибутом <span>data-fls-showmore-content</span> додаємо текст та інший контент, або якщо це список (UL/OL) елементи
+				списку (LI).
+				<br><br>
+				Залежно від того, який контент використовується (текст або елементи списку), вказуємо значення для атрибута
+				<span>data-fls-showmore:</span>
+				<br><br>
+				1. <span>size</span> – обмеження по висоті блоку (за замовчуванням)
+				<br><br>
+				2. <span>items</span> – обмеження кількості виведених елементів списку
+			</p>
+			<p><span>
+				&#60;div data-fls-showmore="items" class="block"&#62; <br>
+					&#60;ul data-fls-showmore-content class="block__content"&#62; <br>
+						&#60;li&#62;Пункт №1&#60;/li&#62; <br>
+						&#60;li&#62;Пункт №2&#60;/li&#62; <br>
+						&#60;li&#62;Пункт №3&#60;/li&#62; <br>
+						&#60;li&#62;Пункт №4&#60;/li&#62; <br>
+						&#60;li&#62;Пункт №5&#60;/li&#62; <br>
+					&#60;/ul&#62; <br>
+					&#60;button hidden data-fls-showmore-button type="button" class="block__more"&#62; &#60;span&#62;Показати ще&#60;/span&#62; <br>
+						&#60;span&#62;Приховати&#60;/span&#62; &#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Залежно від того, який тип обрано, вказуємо значення для атрибуту <span>data-fls-showmore-content</span> :
+				<br><br>
+				<span>1.</span> Висота блоку у пікселях (число без px, за замовчуванням 150)
+				<br><br>
+				<span>2.</span> Кількість виведених елементів списку (число, за замовчуванням 3 )
+			</p>
+			<p><span>
+				&#60;div data-fls-showmore class="block"&#62; <br>
+					&#60;div data-fls-showmore-content="200" class="block__content"&#62; Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+						Blanditiis explicabo voluptates magni culpa, perferendis vel quam consequuntur possimus, vero placeat quo enim <br>
+						obcaecati quas, veritatis magnam non. Architecto, porro voluptatum? <br>
+					&#60;/div&#62; <br>
+					&#60;button hidden data-fls-showmore-button type="button" class="block__more"&#62; &#60;span&#62;Показати ще&#60;/span&#62; <br>
+						&#60;span&#62;Приховати&#60;/span&#62; &#60;/button&#62; <br>
+				&#60;/div>
+			</span></p>
+			<p>
+				Якщо контент буде меншим, ніж зазначене обмеження, кнопка “Показати ще” не буде показана. В іншому випадку, контент
+				обмежиться за висотою або за кількістю елементів і при натисканні на кнопку буде показаний повністю, також, до елемента
+				з атрибутом data-fls-showmore додасться клас --showmore-active (перший спан в кнопці буде прихований, а другий
+				показаний). Повторний клік поверне обмеження.
+				<br><br>
+				Є можливість керувати швидкістю розгортання контенту, для цього слід вказати значення атрибуту <span>data-fls-showmore-button</span>
+				у мілісекундах (за замовчуванням 500):
+			</p>
+			<p><span>
+				&#60;div data-fls-showmore class="block"&#62; <br>
+					&#60;div data-fls-showmore-content="200" class="block__content"&#62; Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+						Blanditiis explicabo voluptates magni culpa, perferendis vel quam consequuntur possimus, vero placeat quo enim <br>
+						obcaecati quas, veritatis magnam non. Architecto, porro voluptatum? <br>
+					&#60;/div&#62; <br>
+					&#60;button hidden data-fls-showmore-button="1000" type="button" class="block__more"&#62; &#60;span&#62;Показати ще&#60;/span&#62; <br>
+						&#60;span&#62;Приховати&#60;/span&#62; &#60;/button&#62; <br>
+				&#60;/div>
+			</span></p>
+			<h2>Увімкнення функціоналу на певній ширині екрану</h2>
+			<p>
+				Для того щоб використовувати функціонал на певній ширині екрана, до об’єкта з атрибутом <span>data-fls-showmore</span> додаємо
+				атрибут <span>data-fls-showmore-media</span> де, через кому, вказуємо потрібну ширину, а також тип:
+				<br><br>
+				1. <span>max</span> (за замовчуванням) – функціонал увімкнеться на ширині меншій ніж зазначена
+				<br><br>
+				2. <span>min</span> – функціонал увімкнеться на ширині більшій ніж зазначена
+			</p>
+			<p><span>
+				&#60;div data-fls-showmore data-fls-showmore-media="768,min" class="block"&#62; <br>
+					&#60;div data-fls-showmore-content="200" class="block__content"&#62; Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+						Blanditiis explicabo voluptates magni culpa, perferendis vel quam consequuntur possimus, vero placeat quo enim <br>
+						obcaecati quas, veritatis magnam non. Architecto, porro voluptatum? <br>
+					&#60;/div&#62; <br>
+					&#60;button hidden data-fls-showmore-button="1000" type="button" class="block__more"&#62; &#60;span&#62;Показати ще&#60;/span&#62; <br>
+						&#60;span&#62;Приховати&#60;/span&#62; &#60;/button&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

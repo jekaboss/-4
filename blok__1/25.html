@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Масонрі сітка"</h1>
+			<p>
+				Масонрі сітка - це специфічний вивід елементів таким чином, що вони заповнюють усе місце в структурних колонках. Приклад: <a class="a" href="https://www.pinterest.com/">вивід зображень на Pinterest</a>
+				<br><br>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 реалізована можливість побудови масонрі сітки на основі <a class="a" href="https://isotope.metafizzy.co/">Isotope</a>. Що дозволяє
+				не тільки виводити елементи у вигляді масонрі сітки, а й додавати функціонал фільтрації, сортування тощо
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/masonry, тут ви знайдете JS-файл компоненту з базовоми
+				налаштуваннями та функціоналом фільтрації, HTML-файл з прикладом коду, а також SCSS-файл для стилізації компоненту
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				У потрібному місці HTML-файту, ви можете скористатись сніпетом masonry, або вручну створити структуру із відповідними
+				дата-атрибутами:
+			</p>
+			<p><span>
+				&#60;div data-fls-masonry class="masonry"&#62; <br>
+					&#60;div data-fls-masonry-item class="masonry__item"&#62;A&#60;/div&#62; <br>
+					&#60;div data-fls-masonry-item class="masonry__item"&#62;B&#60;/div&#62; <br>
+					&#60;div data-fls-masonry-item class="masonry__item"&#62;C&#60;/div&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>Ось приклад масонрі сітки з можливістю фільтрації:</p>
+			<p><span>
+				&#60;div class="masonry"&#62;<br>
+					&#60;ul class="masonry__filter filter-masonry"&#62;<br>
+						&#60;li class="filter-masonry__item"&#62;&#60;a href="#" data-fls-masonry-filter-link="*" class="filter-masonry__link"&#62;Усі&#60;/a&#62;
+						&#60;/li&#62;<br>
+						&#60;li class="filter-masonry__item"&#62;&#60;a href="#" data-fls-masonry-filter-link="a" class="filter-masonry__link">Фільтр
+								А&#60;/a&#62;&#60;/li&#62;<br>
+						&#60;li class="filter-masonry__item"&#62;&#60;a href="#" data-fls-masonry-filter-link="b" class="filter-masonry__link"&#62;Фільтр
+								B&#60;/a&#62;&#60;/li&#62;<br>
+						&#60;li class="filter-masonry__item"&#62;&#60;a href="#" data-fls-masonry-filter-link="c" class="filter-masonry__link">Фільтр
+								C&#60;/a&#62;&#60;/li&#62;<br>
+					&#60;/ul&#62;<br>
+					&#60;div data-fls-masonry class="masonry__items"&#62;<br>
+						&#60;div data-fls-masonry-item data-fls-masonry-filter="a" class="masonry__item"&#62;A&#60;/div&#62;<br>
+						&#60;div data-fls-masonry-item data-fls-masonry-filter="b" class="masonry__item"&#62;B&#60;/div&#62;<br>
+						&#60;div data-fls-masonry-item data-fls-masonry-filter="c" class="masonry__item"&#62;C&#60;/div&#62;<br>
+					&#60;/div&#62;<br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для більш широкого використання можливостей компоненту, дивіться <a class="a" href="https://isotope.metafizzy.co/">документацію Isotop</a>
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

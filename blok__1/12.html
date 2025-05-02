@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Робота з SVG-спрайтом</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) є можливість працювати з SVG-спрайтом
+				<br><br>
+				Для того щоб створити SVG-спрайт виконайте наступні дії:
+				<br><br>
+				<span>1.</span>В налаштуваннях ЧФ4 увімкніть створення SVG-спрайту (images->svgsprite: true)
+				<br><br>
+				<span>2.</span>Розмістіть SVG-іконки в папці src/assets/svgicons
+				<br><br>
+				<span>3.</span>Запустіть режим розробника npm run dev
+			</p>
+			<h2>Використання SVG-спрайту</h2>
+			<p>
+				Для виводу іконки зі спрайту в HTML в режимі розробника ви можете скористатись одним з двох способів
+				<br><br>
+				Вивід за допомогою тегу &#60;use&#62;:
+			</p>
+			<p><span>
+				&#60;svg&#62;<br>
+					&#60;use xlink:href="__spritemap#sprite-fb_icon"&#62;&#60;/use&#62;<br>
+				&#60;/svg&#62;
+			</span></p>
+			<p>
+				Або тегу &#60;img&#62;:
+			</p>
+			<p><span>
+				&#60;img src="__spritemap#sprite-fb_icon-view" alt="Image"&#62;
+			</span></p>
+			<p>
+				Де fb_icon це назва файлу іконки. Зверніть увагу, у варіанті виводу за допомогою тегу &#60;img&#62; до імені іконки додається
+				суфікс -view
+				<br><br>
+				Для виводу інокни зі спрайту в SCSS в режимі розробника ви можете скористатись спеціальним міксіном:
+			</p>
+			<p><span>
+				@include sprite("fb_icon");
+			</span></p>
+			<p>
+				Де fb_icon це назва файлу іконки. В результаті буде виведена властивість background з url іконки, без повторення по центру.
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

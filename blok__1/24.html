@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент “Галерея”</h1>
+			<p>
+				Функціонал підключає галерею (<a class="a" href="https://www.lightgalleryjs.com/"> LightGallery </a>). При натисканні на зображення картинки повне зображення відкривається з можливістю слайд-шоу. Можна створювати як вбудовані, так і лайтбокс-галереї в правому куті розташовується ряд кнопок (налаштовується) для розширених функцій. Наприклад: “Закрити слайд-шоу”, “Завантаження зображення” та ін. Галерея, підтримує як прості зображення, так і відео чи фрейми.
+				<br><br>
+        Для роботи галереї необхідні зображення (відеофайли) у двох форматах: мініатюри – зображення невеликого розміру, які використовуються для попереднього перегляду та зображення повного розміру – необхідні для детального перегляду.
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/gallery, тут ви знайдете JS-файл компоненту з базовоми налаштуваннями, HTML-файл з прикладом коду, а також папку assets з CSS-файлами компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML, До тегу батька об’єктів галереї, додаємо дата-атрибут <span>data-fls-gallery</span>.
+			</p>
+			<p><span>
+				&#60;div data-fls-gallery class="gallery"&#62; .... &#60;/div&#62;
+			</span></p>
+			<p>
+				Сам об’єкт галереї складаються з такої конструкції (тег для повного розміру зображення і всередині тег для превью). Наприклад, можна використовувати таку розмітку:
+			</p>
+			<p><span>
+				&#60;div data-fls-gallery class="gallery"&#62; <br>
+					&#60;a href="img/img-full-1.jpg" class="gallery__image"&#62; <br>
+						&#60;img alt="Превью" src="img/img-thumb-1.jpg" class="gallery__preview"&#62; <br>
+				&#60;/a&#62; <br>
+					&#60;a href="img/img-full-2.jpg" class="gallery__image"&#62; <br>
+						&#60;img alt="Превью" src="img/img-thumb-2.jpg" class="gallery__preview"&#62; <br>
+					&#60;/a&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Для більш широкого використання можливостей компоненту галереї, дивіться 
+				<a class="a" href="https://www.lightgalleryjs.com/docs/getting-started/">документацію LiteGallery</a>
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Цифровий лічильник"</h1>
+			<p>
+				Компонент виводить та анімує цтфрову статистику, що є дуже поширеним елементом в дизайні
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/digcounter, тут ви знайдете JS-файл компоненту, HTML-файл з
+				прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML, ви можете використовувати сніпет digcounter або побудувати HTML-структуру самостійно:
+			</p>
+			<p><span>
+				&#60;div data-fls-watcher class="block"&#62; <br>
+					&#60;div data-fls-digcounter class="block__item"&#62;1500&#60;/div&#62; <br>
+					&#60;div data-fls-digcounter class="block__item"&#62;500&#60;/div&#62; <br>
+					&#60;div data-fls-digcounter class="block__item"&#62;800&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Зверніть увагу, для запуску анімації використовується компонент "<span>Спостерігач</span>", тому до батьківського елементу лічильника
+				доданий дата-атрибут <span></span>
+			</p>
+			<h2>Додаткові можливості</h2>
+			<p>Зміна швидкості</p>
+			<p>
+				Для зміни швидкості анімації необхідно додати атрибут <span>data-fls-digcounter-speed</span> до елементу лічильника та вказати
+				швидкість у мілісекундах (1000 за замовченням)
+			</p>
+			<p><span>
+				&#60;div data-fls-watcher class="block"&#62; <br>
+					&#60;div data-fls-digcounter data-fls-digcounter-speed="500" class="block__item"&#62;1500&#60;/div&#62; <br>
+					&#60;div data-fls-digcounter data-fls-digcounter-speed="200" class="block__item"&#62;500&#60;/div&#62; <br>
+					&#60;div data-fls-digcounter data-fls-digcounter-speed="1700" class="block__item"&#62;800&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>Форматування</p>
+			<p>
+				Існує можливість форматування виводу цифр відділяючи тисячі сотрі тисяч і т.д. Для цього необхідно додати атрибут
+				<span>data-fls-digcounter-format</span> до елементу лічильника. Для налаштування розмежувача можно додати символ у якості значення
+				атрибуту (за замовченням пробіл)
+			</p>
+			<p><span>
+				&#60;div data-fls-watcher class="block"&#62; <br>
+					&#60;div data-fls-digcounter data-fls-digcounter-format="." class="block__item"&#62;1500&#60;/div&#62; <br>
+					&#60;div data-fls-digcounter data-fls-digcounter-format class="block__item"&#62;500&#60;/div&#62; <br>
+					&#60;div data-fls-digcounter data-fls-digcounter-format="," class="block__item"&#62;800&#60;/div&#62; <br>
+					... <br>
+				&#60;/div&#62;
+			</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

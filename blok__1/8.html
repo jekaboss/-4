@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Робота з зображеннями. Огляд функціоналу</h1>
+			<p>В збірці "Чертоги Фрілансера" 4 (ЧФ4) реалізована автоматизація широких можливостей оптимізації зображень:</p>
+			<p>1. Оптимізація (зменьшення ваги) JPEG/JPG, PNG, GIF зображень</p>
+			<p>2. Конвертація в сучасні формати WEBP/AVIF, що дуже суттєво зменьшує вагу зображень</p>
+			<p>3. Створення меньших за розміром копій під різні ширини екранів</p>
+			<p>4. Створення більших за розміром копій для виводу на екранах з високою щильністю пікселів на дюйм (DPI)</p>
+			<p>Усіма опціями можна керувати в налаштуваннях ЧФ4, в розділі images -> optimize:</p>
+			<p><span>Увага! ЧФ4 не застосовує оптимізацію зображень при розробці під CMS WordPress</span></p>
+			<p>
+				<span>enable</span> - дозволяє вимкнути будь-яку оптимізацію, це може бути потрібно у випадку подільшої інтеграції на бекенд, де
+				існують власні методи оптимізації.
+			</p>
+			<p>
+				<span>edithtml</span> - за потреби, дозволяє вимикати автоматичне редагування HTML-коду (вставка копій зображень під різні екрани,
+				заміна назви файлу на сучасний формат при конвертації тощо)
+			</p>
+			<p>
+				<span>sizes</span> - дозволяє через кому вказати ширини зображень які треба створити для виводу на відповідних екранах, наприклад
+				якщо вказано [600, 1200] то:
+			</p>
+			<p>В режимі розробки:</p>
+			<p>
+				<span>&#60;img src="@img/cover.jpg" alt="Image"&#62;</span>
+			</p>
+			<p>Після збірки проєкту:</p>
+			<p><span>
+				&#60;picture&#62; <br>
+					&#60;source media="(max-width: 600px)" srcset="./assets/img/cover-600.webp" type="image/webp"&#62; <br>
+					&#60;source media="(max-width: 1200px)" srcset="./assets/img/cover-1200.webp" type="image/webp"&#62; <br>
+					&#60;img alt="Image" src="./assets/img/cover.webp"&#62; <br>
+				&#60;/picture&#62;
+			</span></p>
+			<p>
+				Якщо ми не хочемо щоб ЧФ4 проводив таку оптимізацію, лишаємо квадратні дужки порожніми: []
+			</p>
+			<p>
+				<span>dpi</span> - дозволяє через кому вказати типи щилькості пікселів екранів (2x, 3x тощо) для яких треба створити зображення,
+				наприклад при [2,3] попередній приклад буде виглядати вже ось так:
+			</p>
+			<p><span>
+				&#60;picture&#62; <br>
+					&#60;source media="(max-width: 600px)" <br>
+						srcset="./assets/img/cover-600.webp 1x,./assets/img/cover-600-2x.webp 2x,./assets/img/cover-600-3x.webp 3x" <br>
+						type="image/webp"&#62; <br>
+					&#60;source media="(max-width: 1200px)" <br>
+						srcset="./assets/img/cover-1200.webp 1x,./assets/img/cover-1200-2x.webp 2x,./assets/img/cover-1200-3x.webp 3x" type="image/web <br>
+				&#60;img alt=" Image" src="./assets/img/cover.webp" <br>
+						srcset="./assets/img/cover.webp 1x,./assets/img/cover-2x.webp 2x,./assets/img/cover-3x.webp 3x"&#62; <br>
+				&#60;/picture&#62;
+			</span></p>
+			<p>Якщо ми не хочемо щоб ЧФ4 проводив таку оптимізацію, лишаємо квадратні дужки порожніми: []</p>
+			<p><span>attrignore</span> - назва атрибути, при додаванні якого до тегу IMG оптимізація зображення, вказаного в цьому тезі буде ігноруватись.</p>
+			<p><span>modernformat</span> - розділ конвертації в сучасні формати WEBP/AVIF</p>
+			<p><span>modernformat -> enable</span> - керує потребою конвертувати зображення в сучасний формат</p>
+			<p><span>modernformat -> type</span> - вказуємо в який формат конвертувати WEBP чи AVIF</p>
+			<p><span>modernformat -> only</span>- якщо true то оригінальне зображення буде видалено, якщо false то буде інтегроване в конструкцію
+			&#60;picture&#62;</p>
+			<p><span>modernformat -> quality</span> - налаштування якості зображення від 0 до 100, чим вище число тим краща якість, але більша вага</p>
+			<p><span>jpeg</span> - керування налаштуваннями формату JPEG</p>
+			<p><span>jpeg -> quality</span> - налаштування якості зображення від 0 до 100, чим вище число тим краща якість, але більша вага</p>
+			<p><span>png</span>- керування налаштуваннями формату PNG</p>
+			<p><span>png -> quality</span> - налаштування якості зображення від 0 до 100, чим вище число тим краща якість, але більша вага</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

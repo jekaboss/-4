@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Курсор"</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) є можливість використовувати власну стилізацію та анімацію курсору
+				миші
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/effects/cursor, тут ви знайдете JS-файл компоненту а також SCSS-файл
+				для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML до об'єкту, всередені якого треба виводити стилізований курсор, додайте дата-атрибут <span>data-fls-cursor</span>
+			</p>
+			<p><span>
+				&#60;html data-fls-cursor&#62;&#60;/html&#62;
+			</span></p>
+			<p>
+				Для додавання анімаційного елементу курсору, так званої тіні, додайте ще один атрибут <span>data-fls-cursor-shadow</span>
+			</p>
+			<p><span>
+				&#60;html data-fls-cursor data-fls-cursor-shadow&#62;&#60;/html&#62;
+			</span></p>
+			<p>Стилізуйте компонент за бажанням.</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

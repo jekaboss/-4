@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Спойлери"</h1>
+			<p>Спойлер – це заголовок, при натисканні на який під ним розгортається певний контент.</p>
+			<h2>Основні можливості</h2>
+			<p>
+				<span>1.</span> Використання безлічі блоків зі спойлерами
+				<br><br>
+				<span>2.</span> Вимкнення/увімкнення функціоналу на певній ширині екрану
+				<br><br>
+				<span>3.</span> Функція “акордеон”, коли в блоці може бути відкритий лише один спойлер
+				<br><br>
+				<span>4.</span> Можливість закриття по кліку за межами спойлера
+				<br><br>
+				<span>5.</span> Можливість анімованого відкриття
+				<br><br>
+				<span>6.</span> Семантика та доступність
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/spollers, тут ви знайдете JS-файл компоненту, HTML-файл з
+				прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				У потрібному місці викликати сніпет <span>spollers</span> (класи можна замінити на потрібні). Або вручну створити структуру із
+				відповідними дата-атрибутами. Зауважте, що додавання атрибуту <span>data-fls-spollers-open</span> для елемента <span>details</span> зробить
+				спойлер активним (відкритим).
+			</p>
+			<h2>Приклад блоку з двома спойлерами:</h2>
+			<p>
+				<span>
+					&#60;div data-fls-spollers class="spollers"&#62; <br>
+					&#60;details class="spollers__item"&#62; <br>
+					&#60;summary class="spollers__title"&#62;Заголовок спойлера&#60;/summary&#62; <br>
+					&#60;div class="spollers__body"&#62;Контент спойлера #1&#60;/div&#62; <br>
+					&#60;/details&#62; <br>
+					&#60;details class="spollers__item"&#62; <br>
+					&#60;summary class="spollers__title"&#62;Заголовок спойлера #2&#60;/summary&#62; <br>
+					&#60;div class="spollers__body"&#62;Контент спойлера&#60;/div&#62; <br>
+					&#60;/details&#62;
+					&#60;/div&#62;
+				</span>
+			</p>
+			<p>
+				У момент ініціалізації (увімкнення) функціонала спойлера контент буде прихований, а до елемента з атрибутом
+				<span>data-fls-spollers</span> буде додано клас <span>--spoller-init</span>
+				<br><br>
+				Вимкнення/увімкнення функціоналу на певній ширині екрану
+				<br><br>
+				Для того, щоб вимкнути/включити функціонал спойлера на певній ширині екрана, необхідно для атрибуту <span>data-fls-spollers</span>
+				через кому вказати потрібну ширину екрану а також тип:
+				<br><br>
+				<span>max</span> (за замовчуванням) — функціонал увімкнеться на ширині меншій за вказану
+				<br><br>
+				<span>min</span> — функціонал увімкнеться на ширині більшій ніж зазначена
+			</p>
+			<p><span>
+				&#60;div data-fls-spollers="768,min" class="spollers"&#62; ... &#60;/div&#62;
+			</span></p>
+			<h2>Увімкнення режиму “акордеон”</h2>
+			<p>
+				Для того, щоб увімкнути режим акордеон, необхідно для елемента з атрибутом data-fls-spollers додати атрибут
+				<span>data-fls-spollers-one</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-spollers data-fls-spollers-one class="spollers"&#62; ... &#60;/div&#62;
+			</span></p>
+			<p>
+				Тепер, при відкритті спойлера, інший відкритий спойлер у блоці закриватиметься
+				<br><br>
+				Управління швидкістю анімації
+				<br><br>
+				Для того, щоб керувати часом анімації відкриття/закриття спойлера, необхідно для елемента з атрибутом <span>data-fls-spollers</span>
+				додати атрибут <span>data-fls-spollers-speed</span>, а в якості значення вказати час анімації в мілісекундах (за замовчуванням 500).
+			</p>
+			<p>
+				&#60;div data-fls-spollers data-fls-spollers-speed="1000" class="spollers"&#62; ... &#60;/div&#62;
+			</p>
+			<h2>Закриття при кліку поза спойлером</h2>
+			<p>
+				Якщо необхідно закривати спойлер(и) при кліку поза блоком (“на порожньому місці”), слід додати потрібному заголовку(кам)
+				атрибут <span>data-fls-spollers-close</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-spollers class="spollers"&#62; <br>
+					&#60;details class="spollers__item"&#62; <br>
+						&#60;summary data-fls-spollers-close class="spollers__title"&#62;Заголовок спойлера&#60;/summary&#62; <br>
+						&#60;div class="spollers__body"&#62;Контент спойлера&#60;/div&#62; <br>
+					&#60;/details&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<h2>Прокрутка до заголовку</h2>
+			<p>
+				Якщо необхідно прокрутити скрол до заголовку відкритого спойлеру, слід додати потрібному елементу (тег details) атрибут
+				<span>data-fls-spollers-scroll</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-spollers class="spollers"&#62; <br>
+					&#60;details data-fls-spollers-scroll class="spollers__item"&#62; <br>
+						&#60;summary class="spollers__title">Заголовок спойлера&#60;/summary&#62; <br>
+						&#60;div class="spollers__body">Контент спойлера&#60;/div&#62; <br>
+					&#60;/details&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+			<p>
+				Є можливість більш тонких налаштувань. Наприклад, якщо треба щоб скрол враховув шапку сайту (коли вона фіксована), то
+				варто додати атрибут <span>data-fls-spollers-scroll-noheader</span>.
+				<br><br>
+				Також, в самому атрибуті <span>data-fls-spoller-scroll</span> можна дописати числове значення яке буде враховане при скролі:
+			</p>
+			<p><span>
+				&#60;div data-fls-spollers class="spollers"&#62; <br>
+					&#60;details data-fls-spollers-scroll="20" data-fls-spollers-scroll-noheader class="spollers__item"&#62; <br>
+						&#60;summary class="spollers__title"&#62;Заголовок спойлера&#60;/summary&#62; <br>
+						&#60;div class="spollers__body">Контент спойлера&#60;/div&#62; <br>
+					&#60;/details&#62; <br>
+				&#60;/div&#62;
+			</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

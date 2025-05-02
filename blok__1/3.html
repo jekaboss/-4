@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h2>
+				Архітектура «Чертогів Фрілансера» 4. Файли та папки
+			</h2>
+			<h3>Розархівувавши збірку, в корені ви виявите такі файли та папки:</h3>
+			<p class="text">1. Папка <span>src</span> - містить похідні файли та папки проекту. Саме тут працює розробник</p>
+			<p class="text">2. Файл <span>template.config.js</span>, містить користувацькі налаштування ЧФ4</p>
+			<p class="text">3. Файл <span>README.txt</span> - важлива коротка інформація щодо використання ЧФ4</p>
+			<p class="text">4. Файл <span>cover.jpg</span> - обкладинка ЧФ4</p>
+			<p class="text">5. Файл <span>package.json</span>, містить команди запуску збирачів, інформацію про встановлені плагіни та їх версії. А також іншу інформацію про автора та версію збірки. Не рекомендується редагувати без відповідних знаннь</p>
+			<p class="text">6. Файл <span>docker-compose.yml</span>, містись інструкції щодо встановлення та запуску серверу в режимі <span>fullstack</span> для роботи з <span>CMS WordPress</span>. Не рекомендується редагувати без відповідних знаннь</p>
+			<p class="text">7. Папка <span>template_modules</span> містить функціонал збірки. Не рекомендується редагувати</p>
+			<p class="text">8. Файл <span>vite.config.js</span>, містить інструкції для роботи системи <span>VITE</span>. Не рекомендується редагувати</p>
+			<p class="text">9. При першому запуску будь-якого режиму, з'явиться папка <span>.vscode</span>, яка буде містити налаштування редактора та сніпети (якщо це дозволено в налаштуваннях ЧФ4)</p>
+			<p class="text">10. При першому запуску команди <span>npm run zip</span>, з'явиться папка zip, яка буде містити zip-архів кінцевих файлів проєкту</p>
+			<p class="text">11. При першому запуску режима <span>fullstack (npm run wp, npm run wpbuild)</span>, з'явиться папка <span>backend</span>, яка містить папки <span>wordpress та database</span>. Не рекомендується редагувати без відповідних знаннь</p>
+			<p class="text">12. Після інсталяції також автоматично з'являться папка <span>node_modules</span> та файл <span>package-lock.json</span>. Не редагувати</p>
+			<h3>Вміст папки src:</h3>
+			<p class="text">1. Файл <span>index.html</span> - індексна (головна) сторінка проєкту що розробляється</p>
+			<p class="text">2. Папка <span>assets</span> - використовується для зберігання медіа-файлів проєкту - зображеннь, шрифтів, іконок тощо</p>
+			<p class="text">3. Папка <span>styles</span> - містить загальні файли стілів проєкту</p>
+			<p class="text">4. Папка <span>js</span> - містить загальні файли скриптів проєкту, а також, папки та файли бібліотек та фреймворків</p>
+			<p class="text">5. Папка <span>pug</span> - містить файли для роботи з препроцесором PUG</p>
+			<p class="text">6. Папка <span>php</span> - містить PHP-компоненти та є головною папкою PHP-серверу якщо таке налаштування увімкнене</p>
+			<p class="text">7. Папка <span>files</span> (порожня) - всі файли цієї папки будуть скопійовані в папку з результатом (dist/files)</p>
+			<p class="text">8. Папка <span>components</span> - містить усі HTML/CSS/SCSS/JS компоненти ЧФ4, а також тему для CMS WordPress, шаблони HTML-сторінок та їх головний контент</p>
+			<h3>Вміст папки src/components:</h3>
+			<h2>Містить усі HTML/CSS/SCSS/JS компоненти ЧФ4, а також тему для CMS WordPress, шаблони HTML-сторінок та їх головний
+			контент</h2>
+			<p class="text">1. Папка <span>custom</span> (порожня) - тут можна створювати власні компоненти</p>
+			<p class="text">2. Папка <span>wordpress</span> - містить тему для CMS WordPress, плагін та допоміжні файли. Використовується для розробки інтерфейся під CMS WordPress в режимі fullstack (npm run wp, npm run wpbuild)
+				<br> <br>
+				<span>2.1 fls-theme - тема для CMS WordPress</span> <br> <br>
+				<span>2.2 fls-plugin - власний плагін для CMS WordPress</span> <br> <br>
+				<span>2.3 JS-файли - допоміжні файли, не редагувати, не видаляти</span>
+			</p>
+			<p class="text">3. Папка <span>templates</span> - містить шаблони HTML-сторінок, можна додавати свої <br> <br>
+				<span> 3.1 Папка main - містить HTML/SCSS/JS файли основного HTML-шаблону проєкту</span> <br> <br>
+				<span>3.2 Папка projectpage - містить HTML-шаблон сторінки проєкту</span>
+			</p>
+			<p class="text">4. Папка <span>pages</span> - містить HTML/SCSS/JS файли основного контенту сорінок проєкту <br> <br>
+				<span>4.1 Папка home - містить HTML/SCSS/JS файли основного контенту інтексної (головної) сторінки проєкту</span>
+			</p>
+			<p class="text">5. Папка <span>effects</span> - містить папки та HTML/SCSS/JS файли компонентів які додають в проєкт різноманітні ефекти. Можна додавати свої</p>
+			<p class="text"> 6. Папка <span>forms</span> - містить папки та HTML/SCSS/JS файли компонентів які додають в проєкт різноманітний функціонал для роботи з формами та їх елементами. Можна додавати свої</p>
+			<p class="text">7. Папка <span>layout</span> - містить папки та HTML/SCSS/JS файли компонентів які додають в проєкт різноманітні частини інтерфейсу. Можна додавати свої</p>
+			<p>
+				Додатково, папки компонентів можуть містити папки та файли плагінів конкретного компоненту, наприклад
+				<span>src/components/layout/header/plugins/scroll</span>
+			</p>
+			<h3>Вміст папки src/assets:</h3>
+			<p class="text">1. Папка <span>fonts</span> (порожня) - використовується для конвертації та додавання локальних шрифтів
+				в проєкт.</p>
+			<p class="text">2. Папка <span>img</span> (порожня) - використовується для зберігання та використання зображень</p>
+			<p class="text">3. Папка <span>svgicons</span> (порожня) - використовується для конвертації та додавання в проєкт
+				іконкового шрифту та/або спрайту</p>
+			<h3>Вміст папки src/styles:</h3>
+			<p>
+				Файл <span>style.scss</span> - головний файл стилів, який підключається до усіх HTML-сторінок.
+			</p>
+			<p>
+				Файл <span>settings.scss</span> - файл налаштуваннь загальних значень стилів проєкту
+			</p>
+			<p>
+				Папка <span>fonts</span> - містить автоматично заповнювані, при запуску будь-якого режиму, CSS-файли стилів
+				підключення локальних та іконкового шрифтів
+			</p>
+			<p>
+				Папка <span>includes</span> - містить загальні CSS/SCSS-файли стілів <br> <br>
+				<span>1. Файл index.scss - автоматично підключається до кожного SCSS-файлу проєкту та містить підключення налаштувань,
+					SCSS
+					міксінів та шаблонів. Можна підключати свої</span> <br> <br>
+				<span>2. Файл extends.scss - містить набір SCSS-шаблонів. Можна додавати свої</span> <br> <br>
+				<span>3. Файл mixins.scss - містить набір SCSS-міксінів. Можна додавати свої</span><br> <br>
+				<span>4. Файл spritemap.scss - містить SCSS-міксін для роботи з SVG-спрайтом. Заповлюється автоматично</span>
+			</p>
+			<p class="text">
+				1. Папка <span>libs</span> - містить автоматично підключаємі до HTML-сторінок CSS-файли <br> <br>
+				<span>1.1 Файл reset.css - автоматично підключається до кожної HTML-сторінки, якщо не використовується інша
+					CSS-бібліотека/фреймворк</span><br> <br>
+				<span>1.2 Файл tailwind.css - автоматично підключається до кожної HTML-сторінки, якщо використання вказано в
+					налаштуваннях ЧФ4</span>
+			</p>
+			<h3>Вміст папки src/js:</h3>
+			<p class="text">
+				1. Файл <span>app.js</span>(порожній) - основний файл, загальних для усього проєкту, скриптів. Підключається до кожної
+				HTML-сторінки
+			</p>
+			<p class="text">2. Папка common - містить файли загальних скриптів <span> 2.1 Файл functions.js - містить корисні
+					функції, які використовуються в компонентах ЧФ4</span></p>
+			<p class="text">3. Папка <span>react</span> - містить стартові файли та папки для роботи з React</p>
+			<p class="text">4. Папка <span>vue</span> - містить стартові файли та папки для роботи з Vue</p>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

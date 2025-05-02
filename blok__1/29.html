@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Прелоадер"</h1>
+			<p>
+				Компонент "Прелоадер" здатен відображати певну анімаю під час завантаження сторінки. Підходить для сторінок з великою
+				кількістю зображень.
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/effects/preloader, тут ви знайдете JS-файл компоненту, HTML-файл який автоматично підключається в 
+				&#60;head&#62;, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				В HTML-файлах сторінок, де потрібен прелоадер, налаштуйте змінні які передаються через locals в шаблон сторінки:
+			</p>
+			<p><span>
+				... <br>
+				"preloader": { <br>
+				"enable":"true", <br>
+				"once":"false" <br>
+				}, <br>
+				...
+			</span></p>
+			<p>Де preloader->enable це вмикач компоненту, а preloader->once це вмикач лише одно показу анімації підвантаження.</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Адаптивне меню" (бургер)</h1>
+			<p>
+				Функціонал реагує на клік на кнопку меню “бургера” (елемент з класом icon-menu). При цьому до тега html додається
+				атрибут <span>data-fls-menu-open</span>, а також спрацьовує блокування прокручування сторінки. При повторному натисканні відбуваються
+				зворотні дії.
+				<br><br>
+				Також, компонент містить базові стилі іконки меню та анимації відкриття.
+			</p>
+			<h2>Використання</h2>
+			<p>
+				Для побудови меню та підключення функціоналу компоненту можна використовувати сніпет menu або побудувати структуру
+				вручну або підключити готовий приклад з папки компоненту.
+				<br><br>
+				Код меню:
+			</p>
+			<p><span>
+				&#60;div class="menu"&#62; <br>
+					&#60;button type="button" data-fls-menu class="menu__icon icon-menu"&#62;&#60;span&#62;&#60;/span&#62;&#60;/button&#62; <br>
+					&#60;nav class="menu__body"&#62; <br>
+						&#60;ul class="menu__list"&#62; <br>
+							&#60;li class="menu__item"&#62; <br>
+								&#60;a href="#" class="menu__link"&#62;Home&#60;/a&#62; <br>
+							&#60;/li&#62; <br>
+							... <br>
+						&#60;/ul&#62; <br>
+					&#60;/nav&#62; <br>
+				&#60;/div&#62; <br>
+			</span></p>
+			<p>Або підключення HTML-коду меню з компоненту:</p>
+			<p><span>&#60;include src="@components/layout/menu/menu.html"&#62;&#60;/include&#62;&#60;/span&#62;&#60;/p&#62; </span></p>
+			<p>
+				Важливо щоб у кнопки відкриття меню був атрибут <span>data-fls-menu</span>
+				<br><br>
+				HTML та базові стилі знаходиться в папці компоненту src/components/layout/menu/
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

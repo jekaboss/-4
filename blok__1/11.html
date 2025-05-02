@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Розробка під CMS WordPress</h1>
+			<p>
+				Стартовий шаблон "Чертоги Фрілансера" 4 (ЧФ4) оснащений можливостями які дозволяють з легкістю розробляти інтерфейс відразу з інтеграцією на <a class="a" href="https://wordpress.com/ru/"> CMS WordPress</a>
+			</p>
+			<p>
+				Для того щоб мати можливість працювати з повноційним сервером на своєму ПК, необхідно встановити систему Docker (вона безкоштовна для власного використання)
+			</p>
+			<img src="../img/10.png" alt="картинка">
+			<p>
+				Після встановлення, Docker має бути просто увімкнений, без необхидності робити з ним щось ще.
+				<br> <br>
+				Для початку роботи, після встановлення ЧФ4 та Docker, виконайте команду npm run wp
+			</p>
+			<p><span>
+				При першому запуску, система створить папку backend куди запише папку database з базою даних та папку wordpress з CMS
+				WordPress. Не редагуйте папку backend та її вміст без чіткого розуміння своїх дій.
+				<br> <br>
+				Дaлі система відкриє браузер з адресою http://localhost:8080/ та запропонує встановлення CMS WordPress на ваш
+				новостворений сервер. Після інсталяції CMS все готово для розробки.
+			</span></p>
+			<p>
+				Якщо ви запускаєте систему вже не вперше, то після команди npm run wp відкриється браузер з адресою серверу CMS WordPress http://localhost:8080/ - головною сторінкою сайту.
+			</p>
+			<p><span>Увага! Docker має бути запущений перед виконанням команди npm run wp</span></p>
+			<p>
+				Для того щоб почати розробку, перейдіть у src/components/wordpress. Тут ви знайдете папку fls-theme. Це папка вже встановленої теми на вашу CMS WordPress і вам достатньо просто редагувати файли згідно задачі.
+			</p>
+			<img src="../img/11.png" alt="картинка">
+			<p><span>
+				Редагування стилів відбувається в src/styles та і відповідних компонентах src/components
+				<br> <br>
+				Редагування скриптів, в режимі розробника, відбувається у відповідних компонентах src/components та у файлі
+				src/components/wordpress/fls-theme/assets/app.js, у випадку коли потрібно написати власну загальну логіку. Не видаляте
+				підключення функціоналу import '../fls-wp-includes.js', це необхідно для коректної роботи.
+				<br> <br>
+				Файл src/components/wordpress/fls-theme/assets/app.js, після збірки проєкту, вже не підключається. JS/CSS код збирається
+				у відповідні файли в папці src/components/wordpress/fls-theme/assets/build
+				<br> <br>
+				Також, після збірки, існує можливість внести правки у файли
+				/wp-content/themes/fls-theme/assets/build/css/custom.css та
+				/wp-content/themes/fls-theme/assets/build/js/custom.js
+				<br> <br>
+				Увага! Не редагуйте інші JS-файли які знаходяться в src/components/wordpress
+			</span></p>
+			<p>
+				Також, у src/components/wordpress доступна папка fls-plugin для створення власного плагіну
+				<br> <br>
+				Після завершення роботи на сайтом, виконайте команду npm run wpbuild, після цього, за допомогою плагіна WordPress для
+				переносу сайту, який треба встановити самостійно, створіть дамп сайту та бази даних для подальшого переносу на
+				віддалений сервер.
+			</p>
+			<p><span>Через те що після виконання команд npm run wp та npm run wpbuild запускається Docker сервер, його варто зупиняти в момент перерви у розробці або її завершення. Для цього виконуйте команду npm run wpstop</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

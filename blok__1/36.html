@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Завантаження на сервер через FTP</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) є можливість автоматичного завантаження зібраного проєкту (папка dist)
+				на сервер за допомогою FTP
+				<br><br>
+				Для цього вкажіть необхідні дані в налаштуваннях ЧФ4 в розділі ftp:
+			</p>
+			<p>
+				<span>spa</span> - Налаштування відправлення кінцевих файлів (з папки dist) на сервер (хостинг) по FTP в режимі продакшена
+				<br><br>
+				<span>host</span> - Ім'я FTP хосту
+				<br><br>
+				<span>port</span> - FTP Порт
+				<br><br>
+				<span>remoteDir</span> - Віддалена папка на сервері. Можна використовувати змінну projectName яка містить ім'я папки проєкту
+				<br><br>
+				<span>user</span> - Ім'я користувача FTP
+				<br><br>
+				<span>password</span> - Пароль користувача FTP
+			</p>
+			<p>
+				Після налаштування ви можете користуватись командою термінала <span>npm run deploy</span>, яка об'єднує в собі команду збірки проєкту
+				(режим продакшн) а також завантаження результату на сервер за допомогою FTP
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

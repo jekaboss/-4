@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "День/Ніч"</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) реалізований функціонал зміни стилю сайту темний / світлий, опираючись
+				на налаштування системи користувача або за часом доби або за допомогою кнопки.
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/effects/darklite, тут ви знайдете JS-файл компоненту та SCSS-файл
+				для стилізації
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>Додайте на свою HTML-сторінку дата-атрибут <span>data-fls-darklite</span>, наприклад до тегу &#60;html&#62;:</p>
+			<p><span>
+				&#60;html data-fls-darklite&#62;&#60;/html&#62;
+			</span></p>
+			<p>
+				Цього достатньо щоб компонент розпізнав налаштування системи користувача і додав відповідний дата-атрибут до тегу &#60;html&#62;
+				: <span>data-fls-darklite-light або data-fls-darklite-dark</span>
+				<br><br>
+				Якщо ви хочете щоб атрибути стилю додавались за часом доби, додайте дата атрибут <span>data-fls-darklite-time</span>:
+			</p>
+			<p><span>
+				&#60;html data-fls-darklite data-fls-darklite-time>&#62;&#60;/html&#62;
+			</span></p>
+			<p>
+				Тепер атрибут data-fls-darklite-dark буде додаватиз з 18 години вечора до 5 години ранку, весь інший час буде додаватись
+				атрибут data-fls-darklite-light
+				<br><br>
+				Для налаштування власного проміжку в якому буде додаватись атрибут <span>data-fls-darklite-dark</span>, вкажіть для атрибуту
+				<span>data-fls-darklite-time</span> значення через кому:
+				<br><br>
+				&#60;html data-fls-darklite data-fls-darklite-time="13,23"&#62;
+				<br><br>
+				Тепер атрибут <span>data-fls-darklite-dark</span> буде додаватись у проміжку з 13 годин до 23 години
+				<br><br>
+				Якщо ви хочете надати користувачу можливість самостійно вмикати ту чи іншу тему сайту, додайте у ваш інтерфейс кнопку з
+				дата-атрибутом <span>data-fls-darklite-set:</span>
+			</p>
+			<p><span>
+				&#60;button data-fls-darklite-set&#62;...&#60;/button&#62;
+			</span></p>
+			<p>
+				При натискані кнопки поточна тема змінеться на протилежну, і в браузер користувача буде збережений його вибір.
+				<br><br>
+				Щоб надати користувачу можливість видаляти збережений вибір теми, додайте у ваш інтерфейс кнопку з дата-атрибутом
+				<span>data-fls-darklite-reset:</span>
+			</p>
+			<p><span>
+				&#60;button data-fls-darklite-reset&#62;...&#60;/button&#62;
+			</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

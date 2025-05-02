@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Спостерігач"</h1>
+			<p>
+				Компонент “Спостерігач” можна використовувати для вирішення різних завдань: анімація елементів при скролі, підсвічування
+				активного пункту меню (використовується в компоненті “СкролДо”) та багатьох інших.
+				<br><br>
+				Суть роботи спостерігача полягає в додаванні класу --watcher-view елементу в момент його появи у в’юпорті (екрані) при
+				скролі та при відкритті сторінки. І, відповідно, прибраний при відході об’єкта з в’юпорту.
+			</p>
+			<h2>Використання компонента</h2>
+			<p>
+				Для того щоб "Спостерігач" почав стежити за об'єктом, додайте йому атрибут <span>data-fls-watcher</span>
+			</p>
+			<p><span>
+				&#60;div data-fls-watcher class="block"&#62; ... &#60;/div&#62;
+			</span></p>
+			<h2>Додаткові налаштування:</h2>
+			<p>
+				1. <span>data-fls-watcher-root=’селектор’</span> – селектор батька всередині якого спостерігатиме за об’єктом. За замовчуванням &#60;body&#62;
+				<br><br>
+					2. <span>data-fls-watcher-margin=’значення’</span> – відступ від батька. Вказуємо значення у PX або у %
+				<br><br>
+					3. <span>data-fls-watcher-threshold=’значення’</span> – відсоток показу об’єкта для спрацьовування. Де 1 = 100% показ об’єкта.
+					Вказуємо лише цілі чи десяткові числа, за замовчуванням 0. Може містити масив значень через кому.
+				<br><br>
+					4. <span>data-fls-watcher-once</span> – спостерігати лише один раз. Тобто клас до об’єкта додасться тільки один раз і не буде
+					прибраний при виході з в’юпорту.
+				<br><br>
+					Приклад – клас додасться лише один раз, з появою об’єкта на 50% його висоти:
+			</p>
+			<p><span>
+				&#60;div data-fls-watcher-threshold="0.5" data-fls-watcher-once data-fls-watcher class="block"&#62; ... &#60;/div&#62;
+			</span></p>
+			<h2>Події</h2>
+			<p>
+				Після кожного спрацювання спостерігача виникає подія watcherСallback, його можна відловити в будь-якій частині коду:
+			</p>
+			<p><span>
+				document.addEventListener("watcherCallback", function (e) {
+				// Повна інформація від спостерігача
+				const entry = e.detail.entry
+				// Спостерігаємий об'єкт
+				const targetElement = entry.target
+				})
+			</span></p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

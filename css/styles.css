@@ -1,0 +1,131 @@
+.wraper{
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+body{
+	background-color: #555151;
+}
+.blok__1 a,
+.blok__2 a{
+	font-family: "Winky Rough", sans-serif;
+	display: flex;
+	justify-content: start;
+	color: #b7b7d1;
+}
+
+.blok__1,
+.blok__2{
+	max-width: 950px;
+	background-color: #2f448a;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+a{
+	margin: 10px 0;
+}
+a:hover{
+	color: #f4a915;
+}
+
+/* ======================= */
+
+.blok__1 {
+	color: #000000;
+	h1{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 900;
+		padding-bottom: 20px;
+	  font-size: 30px; 
+  }
+	p{
+		font-family: "Winky Rough", sans-serif;
+		font-family: 300;
+		padding-bottom: 20px;
+		color: #ffffff;
+	}
+	h2{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 900;
+		font-size: 23px;
+		padding: 20px 0;
+	}
+	h3{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 300;
+		color: #04ff18;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+	.text{
+		color: #f4a915;
+		padding: 0 0 20px 20px;
+	}
+	img{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		max-width: 603px;
+	}
+	span{
+		color: #000;
+		padding-top: 20px;
+	}
+	.span{
+		padding-left: 20px;
+		color: #04ff18;
+	}
+	.w{
+		color: #f4a915;
+	}
+	.a{
+		display: contents;
+		margin: 0;
+		color: #fb286c;
+	}
+}
+
+.blok__2 {
+	color: #000000;
+	h1{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 900;
+		padding-bottom: 20px;
+	  font-size: 33px; 
+  }
+	p{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 300;
+		padding-bottom: 20px;
+		color: #ffffff;
+	}
+	h2{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 900;
+		font-size: 30px;
+		padding: 20px 0;
+	}
+	h3{
+		font-family: "Winky Rough", sans-serif;
+		font-weight: 300;
+		color: #04ff18;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+	.text{
+		color: #f4a915;
+		padding: 0 0 20px 20px;
+	}
+	img{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		max-width: 603px;
+	}
+	span{
+		color: #00f3ff;
+	}
+}

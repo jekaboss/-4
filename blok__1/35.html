@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Завантаження на GitHub</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) є можливість автоматичного завантаження зібраного проєкту (папка dist)
+				на сервіс <a class="a" href="https://github.com/">GitHub</a>.
+				<br><br>
+				Для цього вкажіть шлях до вашого репозиторію в налаштуваннях ЧФ4 git->repo, також є можливість вказати branch:
+			</p>
+			<p><span>
+				git: { <br>
+				repo: "https://github.com/someuser/somerepo.git", <br>
+				branch:"main" <br>
+				},
+			</span></p>
+			<p>
+				Після налаштування ви можете користуватись командою термінала npm run git, яка об'єднує в собі команду збірки проєкту
+				(режим продакшн) а також завантаження результату на GitHub.
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>
