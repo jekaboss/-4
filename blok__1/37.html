@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Документація ЧФ4</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Статистика витраченого часу на проєкт</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (далі ЧФ4) реалізована можливість збирати та переглядати статистику
+				вистраченого часу на проєкт.
+			</p>
+			<p><span>
+				Статистика збирається під час роботи режиму розробника
+			</span></p>
+			<p>
+				Для того щоб почати збирати статистику необхідно увікнути цей функціонал в налаштуваннях ЧФ4:
+			</p>
+			<p><span>
+				statistics: { <br>
+				enable: true, <br>
+				... <br>
+				}
+			</span></p>
+			<p>
+				Для перегляду статистики ви можете використовувати команду терміналу npm run stat, або увікнути автоматичний вивід при
+				запуску режиму продакшн:
+			</p>
+			<p><span>
+				statistics: { <br>
+				enable: true, <br>
+				showonbuild: true <br>
+				}
+			</span></p>
+			<h2>Наразі можна отримати такі дані:</h2>
+			<p>
+				<span>1.</span> Дата початку роботи над проєктом (перший запуск режиму розробника)
+				<br><br>
+				<span>2.</span> Дата кінця роботи над проєктом (остання зупинка режиму розробника, або останній запуск режиму продакшн)
+				<br><br>
+				<span>3.</span> Загальний час роботи над проєктом (час роботи режиму розробника)
+				<br><br>
+				<span>4.</span> Кількість сесій (кількість запусків/зупинок режиму розробника)
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>
