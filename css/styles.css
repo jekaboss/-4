@@ -12,10 +12,10 @@ body{
 }
 .blok__1 a,
 .blok__2 a{
-	font-family: "Winky Rough", sans-serif;
+	font-family: "Edu AU VIC WA NT Arrows", sans-serif;
 	display: flex;
 	justify-content: start;
-	color: #b7b7d1;
+	color: #fff;
 }
 
 .blok__1,
@@ -28,6 +28,9 @@ body{
 
 a{
 	margin: 10px 0;
+	border-radius: 5px;
+	border: 1px solid #04ff18;
+	padding: 10px;
 }
 a:hover{
 	color: #f4a915;
@@ -36,27 +39,27 @@ a:hover{
 /* ======================= */
 
 .blok__1 {
-	color: #000000;
+	color: #5dd617;
 	h1{
-		font-family: "Winky Rough", sans-serif;
+		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
 		font-weight: 900;
 		padding-bottom: 20px;
 	  font-size: 30px; 
   }
 	p{
-		font-family: "Winky Rough", sans-serif;
+		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
 		font-family: 300;
 		padding-bottom: 20px;
 		color: #ffffff;
 	}
 	h2{
-		font-family: "Winky Rough", sans-serif;
+		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
 		font-weight: 900;
 		font-size: 23px;
 		padding: 20px 0;
 	}
 	h3{
-		font-family: "Winky Rough", sans-serif;
+		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
 		font-weight: 300;
 		color: #04ff18;
 		padding-bottom: 20px;
@@ -70,10 +73,14 @@ a:hover{
 		padding-top: 20px;
 		padding-bottom: 20px;
 		max-width: 603px;
+		@media (min-width: 390px){
+			width: 400px;
+		}
 	}
 	span{
-		color: #000;
+		color: #3fd616;
 		padding-top: 20px;
+		font-family: "Winky Rough", sans-serif;
 	}
 	.span{
 		padding-left: 20px;
