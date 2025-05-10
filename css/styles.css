@@ -74,7 +74,7 @@ a:hover{
 		padding-bottom: 20px;
 		max-width: 603px;
 		@media (min-width: 390px){
-			width: 400px;
+			width: 350px;
 		}
 	}
 	span{
