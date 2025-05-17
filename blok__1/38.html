@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Документація ЧФ4</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Share+Tech&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="wraper">
+		<div class="blok__1">
+			<h1>Компонент "Google Maps"</h1>
+			<p>
+				В стартовому шаблоні "Чертоги Фрілансера" 4 (ЧФ4) реалізована можливість додавання функціоналу <a class="a" href="https://www.google.com/maps">Google Maps</a>
+			</p>
+			<h2>Розташування компоненту</h2>
+			<p>
+				Файли компоненту знаходяться в папці src/components/layout/map, тут ви знайдете JS-файли компоненту та налаштувань,
+				HTML-файл з прикладом коду, а також SCSS-файл для стилізації компоненту.
+			</p>
+			<h2>Використання компоненту</h2>
+			<p>
+				Для початку ви можете отримати власний KEY для повноцінного використання функціоналу Google Maps та додати його в
+				константу MAP_KEY в файлі _settings.js в папці компоненту. Або відкласти цей крок і працювати з мапаки в режимі
+				розробника.
+				<br>
+				Для додавання мапи в потрібному місці HTML скористайтесь сніпетом map, або побудуйте структуру використовуючі певні
+				дата-атрибути.
+				<br>
+				Цей приклад виведе мапу з одним маркером:
+			</p>
+			<p><span>
+				&#60;div data-fls-map class="map"&#62; <br>
+					&#60;div data-fls-map-marker class="map__marker" data-fls-map-lat="50.449688" data-fls-map-lng="30.52348" <br>
+						data-fls-map-title="Title 1"&#62;&#60;/div&#62; <br>
+					&#60;div data-fls-map-body class="map__body" data-fls-map-lat="50.449688" data-fls-map-lng="30.52348"&#62;&#60;/div&#62; <br>
+					&#60;/div&#62;
+			</span></p>
+			<h2>Налаштування компоненту</h2>
+			<p>
+				1. data-fls-map - додається до оболонки конструкції мапи
+				
+				2. data-fls-map-marker - додається до елементу який є маркером на мапі
+				
+				3. data-fls-map-body - додається до елементу який виводить мапу
+				
+				4. data-fls-map-lat та data-fls-map-lng - встановлють координати центру мапи та\або виводу маркеру
+				
+				5. data-fls-map-title - виводить підказку для маркеру
+				
+				6. data-fls-map-icon - виводить власне зображення маркеру
+				
+				7. data-fls-map-marker-zoom - при наявності атрибуту для маркера, робить зум на маркер при кліку по ньому
+				
+				8. data-fls-map-marker-popup - при наявності атрибуту для маркера, відкриває модальне вікно (popup), яке вказане в значенні
+				атрибуту, при кліку по маркеру. Дивись компонент "Модальне вікно"
+				
+				Додатково можна вказати власний <a class="a" href="https://snazzymaps.com/">стиль Google Maps</a> в файлі _settings.js в папці компоненту.
+			</p>
+		</div>
+		<!-- <div class="blok__2"></div> -->
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

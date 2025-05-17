@@ -21,7 +21,7 @@ body{
 .blok__1,
 .blok__2{
 	max-width: 950px;
-	background-color: #2f448a;
+	background-color: #000000;
 	padding: 20px;
 	border-radius: 10px;
 }
@@ -40,26 +40,28 @@ a:hover{
 
 .blok__1 {
 	color: #5dd617;
+	font-family: "Share Tech", sans-serif;
 	h1{
-		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
+		font-family: "Share Tech", sans-serif;
 		font-weight: 900;
 		padding-bottom: 20px;
 	  font-size: 30px; 
   }
 	p{
-		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
+		font-family: "Share Tech", sans-serif;
 		font-family: 300;
+		line-height: 22px;
 		padding-bottom: 20px;
 		color: #ffffff;
 	}
 	h2{
-		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
+		font-family: "Share Tech", sans-serif;
 		font-weight: 900;
 		font-size: 23px;
 		padding: 20px 0;
 	}
 	h3{
-		font-family: "Edu AU VIC WA NT Arrows", sans-serif;
+		font-family: "Share Tech", sans-serif;
 		font-weight: 300;
 		color: #04ff18;
 		padding-bottom: 20px;
@@ -74,7 +76,7 @@ a:hover{
 		padding-bottom: 20px;
 		max-width: 603px;
 		@media (min-width: 390px){
-			width: 350px;
+			width: 380px;
 		}
 	}
 	span{
