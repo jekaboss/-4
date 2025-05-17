@@ -16,6 +16,9 @@ body{
 	display: flex;
 	justify-content: start;
 	color: #fff;
+	@media (min-width: 390px){
+		width: 350px;
+	}
 }
 
 .blok__1,
